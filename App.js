@@ -26,55 +26,6 @@ import { Platform, Image, View, SafeAreaView, StyleSheet} from 'react-native';
 
 const MORE_ICON = Platform.OS === 'ios' ? 'dots-horizontal' : 'dots-vertical';
 
-const HomeComponent = () => {
-    
-    const [visible, setVisible] = React.useState(true);
-    const [checked, setChecked] = React.useState(false);
-    const [active, setActive] = React.useState('');
-
-    return (
-        
-        <SafeAreaView>
-            <Appbar.Header>
-                <Appbar.BackAction onpress={() => { }} onPress={() => { }} />
-                <Appbar.Content title="Title" subtitle={'Subtitle'} />
-                <Appbar.Action icon="magnify" onPress={() => { }} />
-                <Appbar.Action icon={MORE_ICON} onPress={() => {}} />
-            </Appbar.Header>
-
-            <Banner
-                visible={visible}
-                actions={[
-                    {
-                        label: 'Fix it',
-                        onPress: () => setVisible(false),
-                    },
-                    {
-                        label: 'Learn more',
-                        onPress: () => setVisible(false),
-                    },
-                ]}
-                >
-                There was a problem processing a transaction on your credit card.
-            </Banner>
-
-            <Card>
-                <Card.Content>
-                    <Title>Card title</Title>
-                    <Paragraph>Card content</Paragraph>
-                </Card.Content>
-                <Card.Cover source={require('./photos/20200219-11.png')} />
-                <Card.Actions>
-                    <Button>Cancel</Button>
-                    <Button>Ok</Button>
-                </Card.Actions>
-            </Card>
-
-
-        </SafeAreaView>
-    );
-};
-
 const theme = {
     ...DefaultTheme,
     colors: {
@@ -122,7 +73,6 @@ export default function App() {
     console.log('lavin')
     return (
         <PaperProvider theme={theme}>
-            <HomeComponent />
             <TestState />
             <TestRandom />
         </PaperProvider>
