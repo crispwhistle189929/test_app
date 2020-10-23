@@ -22,7 +22,6 @@ import {
     List
 } from 'react-native-paper';
 import { Platform, Image, View, SafeAreaView, StyleSheet} from 'react-native';
-//import {mdiHanger} from '@mdi/js';
 
 const MORE_ICON = Platform.OS === 'ios' ? 'dots-horizontal' : 'dots-vertical';
 
