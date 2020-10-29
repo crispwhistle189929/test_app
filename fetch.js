@@ -19,6 +19,8 @@ export default class App extends React.Component {
     const res = await fetch("https://reactnative.dev/movies.json");
     const json = await res.json();
     
+    this.setState({data: json.movies});
+    
     this.setState({isClicked: true});
     this.setState({title: 'Data fetched!'});
   }
