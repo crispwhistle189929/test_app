@@ -24,7 +24,7 @@ export default class App extends React.Component {
   }
   
   render() {
-    const {data} = this.state;
+    const {data, isClicked} = this.state;
 
     return(
       <SafeAreaView style = {styles.container}>
@@ -33,13 +33,16 @@ export default class App extends React.Component {
           onPress = {this.fetchData} 
           title = {this.state.title} >
         </Button>
-        {isClicked ? <Text />: (
-        <FlatList
-          data = {data}
-          keyExtractor = {({id}, index) => id}
-          renderItem = {({ item }) => (
-            <Text>{item.title}, {item.releaseYear}</Text>
-          )}
+        {isClicked ? (
+          <FlatList
+            data = {data}
+            keyExtractor = {({id}, index) => id}
+            renderItem = {({ item }) => (
+              <Text>{item.title}, {item.releaseYear}</Text>
+            )}
+          />):(
+          <Text>what the...</Text>
+        )}
         />
       )}
       </SafeAreaView>
