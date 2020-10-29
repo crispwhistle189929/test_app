@@ -43,8 +43,7 @@ export default class App extends React.Component {
           />):(
           <Text>what the...</Text>
         )}
-        />
-      )}
+        
       </SafeAreaView>
     );
   }
