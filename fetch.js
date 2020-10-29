@@ -33,7 +33,15 @@ export default class App extends React.Component {
           onPress = {this.fetchData} 
           title = {this.state.title} >
         </Button>
-        
+        {isClicked ? <Text />: (
+        <FlatList
+          data = {data}
+          keyExtractor = {({id}, index) => id}
+          renderItem = {({ item }) => (
+            <Text>{item.title}, {item.releaseYear}</Text>
+          )}
+        />
+      )}
       </SafeAreaView>
     );
   }
