@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 blueblueblue
+=======
+red hahah i did it
+>>>>>>> main
