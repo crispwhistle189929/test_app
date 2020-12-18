@@ -53,8 +53,8 @@ const TestState = () => {
     return (
         <SafeAreaView style = {styles.btn}>
             <Text>you clicked {count} times</Text>
-            <Button color="#841584" icon = "star" mode = "contained" onPress = {() => setCount(count + 1)} >
-                <Text color = {'red'} text = 'white'>Press me</Text>
+            <Button color="#8ddder" icon = "star" mode = "contained" onPress = {() => setCount(count + 1)} >
+                <Text color = {'blue'} text = 'white'>Press me</Text>
             </Button>
             
         </SafeAreaView>
